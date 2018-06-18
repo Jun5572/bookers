@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   def create
   	@blog = Blog.new(blog_params)
   	if @blog.save
-  		flash[:notice] = "Book was succesfully added！"
+  		flash[:notice] = "Book was successfully added！"
 	  	redirect_to blog_path(@blog.id)
   	else
   		@blogs = Blog.all
@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
   def update
   	blog = Blog.find(params[:id])
   	if blog.update(blog_params)
-  		flash[:notice] = "Book was succesfully updated！"
+  		flash[:notice] = "Book was successfully updated！"
   		redirect_to blog_path(blog.id)
   	else
   		render action: :edit
@@ -39,7 +39,7 @@ class BlogsController < ApplicationController
   def destroy
   	blog = Blog.find(params[:id])
   	blog.destroy
-  	flash[:notice] = "Book was succesfully destroied!"
+  	flash[:notice] = "Book was successfully destroied!"
 #一覧画面に戻る
   	redirect_to blogs_path
   end

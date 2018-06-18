@@ -14,11 +14,11 @@
 
 <p>
 	<span class="edit">
-		<%= link_to "Edit", edit_blog_path(@blog.id) %>
+		<%= link_to "Edit", edit_blog_path(@blog.id), class:"edit_#{@blog.id}" %>
 	</span>
 	<span>|</span>
 	<span class="back-to-books">
-		<%= link_to "Back to Books", blogs_path %>
+		<%= link_to "Back to Books", blogs_path, class:"back" %>
 	</span>
 </p>
 
